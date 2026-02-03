@@ -4,6 +4,7 @@ import { useValentine } from '../context/ValentineContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, Link as LinkIcon, Check, MessageCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 import BackButton from '../components/BackButton';
+import SEO from '../components/SEO';
 import '../styles/Create.css';
 
 export default function Create() {
@@ -60,6 +61,7 @@ export default function Create() {
 
   return (
     <div className="create-container">
+       <SEO title="Create Your Valentine" description="Build a custom Valentine's experience. Upload photos, write a letter, and share a unique link." />
        <div style={{ width: '100%', maxWidth: '700px' }}>
          <BackButton />
        </div>

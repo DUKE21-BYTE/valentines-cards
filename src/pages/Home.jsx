@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Heart } from 'lucide-react';
+import SEO from '../components/SEO';
 import '../styles/Home.css';
 
 // Decorative "Gift Heart" component to simulate the image graphics
@@ -39,6 +40,10 @@ export default function Home() {
 
   return (
     <div className="home-container">
+      <SEO 
+        title="Home" 
+        description="Make this Valentine's unforgettable. Create personalized letters, quizzes, and cards for your loved one." 
+      />
       {/* Background Graphic: White Wave */}
       <div className="bg-wave"></div>
 

@@ -1,16 +1,19 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { ValentineProvider } from './context/ValentineContext'
+import { HelmetProvider } from 'react-helmet-async';
 import './index.css'
 import App from './App.jsx'
+import { ValentineProvider } from './context/ValentineContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ValentineProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ValentineProvider>
+    <HelmetProvider>
+      <ValentineProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ValentineProvider>
+    </HelmetProvider>
   </StrictMode>,
 );
