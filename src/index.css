@@ -1,0 +1,36 @@
+:root {
+  /* New Premium Palette based on User Image */
+  --bg-pink: #ffe3e9;
+  --bg-white: #ffffff;
+  --text-main: #e63946;
+  --text-secondary: #6e6e6e;
+  --accent-red: #d90429;
+  --accent-dark: #2b2d42;
+  
+  --font-heading: 'Oswald', 'Impact', sans-serif; /* Tall, bold font */
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-white);
+  color: var(--text-secondary);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, nav {
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}

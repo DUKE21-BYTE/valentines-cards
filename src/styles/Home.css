@@ -1,0 +1,282 @@
+.home-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: var(--bg-pink); /* Fallback */
+  background: linear-gradient(105deg, var(--bg-pink) 0%, var(--bg-pink) 45%, var(--bg-white) 45.1%, var(--bg-white) 100%);
+  overflow: hidden;
+}
+
+/* Simulate the wave with CSS Gradient or Clip Path */
+/* The reference image has a soft wave. Let's try a radial gradient overlap for smoothness */
+.bg-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 70% 50%, #ffffff 0%, #ffffff 45%, transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Navbar */
+.navbar {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-right a:hover, .nav-right a.active {
+  color: var(--accent-red);
+}
+
+/* Hero Layout */
+.hero-section {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  height: calc(100vh - 100px);
+  padding: 0 4rem;
+}
+
+.hero-visuals {
+  flex: 1;
+  position: relative;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1;
+  color: #ff6b6b; /* Soft Salmon Red */
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hero-text {
+  font-size: 1rem;
+  color: #666;
+  max-width: 400px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+/* Input Field Styled */
+.input-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  max-width: 400px;
+}
+
+.input-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.name-input {
+  border: 2px solid #eee;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.name-input:focus {
+  border-color: var(--accent-red);
+  box-shadow: 0 4px 12px rgba(217, 4, 41, 0.15);
+}
+
+.cta-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-main {
+  background: var(--accent-red);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.btn-text {
+  background: transparent;
+  color: var(--accent-red);
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+}
+
+/* Gift Heart Graphics CSS Construction */
+.gift-heart {
+  /* Using CSS clip-path to make a heart shape from a square would be complex for the patterns */
+  /* Instead, we'll simple make a heart shape container */
+}
+
+.heart-shape {
+  width: 100%;
+  height: 100%;
+  background-color: #ff4d6d;
+  position: relative;
+  transform: rotate(-45deg);
+  box-shadow: -5px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* The classic CSS Heart: Two circles + One square */
+.heart-shape {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  transform: none; /* Reset */
+  box-shadow: none;
+}
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  background: inherit;
+  border-radius: 50px 50px 0 0;
+}
+
+/* Actually, to match the image accurately with patterns, SVG is best. 
+   But let's strive for a CSS approximation using masks or pseudo elements.
+   Simplification: We will use a heart clip-path on a styled div.
+*/
+
+.gift-heart {
+  background-color: #ff4d6d;
+  clip-path: path("M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z");
+  /* The standard SVG path based on 24x24 coord system is too small for clip-path without scaling.
+     Let's use a simpler aspect-ratio generic heart clip-path or background image.
+  */
+  clip-path: none; /* Reset */
+}
+
+.gift-heart .heart-shape {
+   width: 100%;
+   height: 100%;
+   background-color: #ff3b3b; /* Red base */
+   clip-path: path("M 50 90 L 10 40 A 25 25 0 0 1 50 15 A 25 25 0 0 1 90 40 Z"); /* Rough Sketch */
+   /* Better to use an SVG mask or just a mask-image of a heart */
+   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z'/%3E%3C/svg%3E");
+   mask-size: contain;
+   mask-repeat: no-repeat;
+   mask-position: center;
+   background: #ff4757;
+   position: relative;
+}
+
+.gift-heart.black .heart-shape {
+  background: #2f3542;
+}
+
+.dots-pattern {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(#ffffff 20%, transparent 20%);
+  background-size: 15px 15px;
+  opacity: 0.3;
+}
+
+.gift-heart.black .dots-pattern {
+  background-image: radial-gradient(#ff4757 20%, transparent 20%);
+  opacity: 1;
+}
+
+/* Ribbons */
+.ribbon-vertical {
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 15%;
+  background: rgba(255,255,255,0.8);
+  transform: translateX(-50%);
+}
+
+.ribbon-horizontal {
+  position: absolute;
+  left: 0; right: 0; top: 40%;
+  height: 15%;
+  background: rgba(255,255,255,0.8);
+}
+
+.gift-heart.black .ribbon-vertical, .gift-heart.black .ribbon-horizontal {
+   background: #ff6b81;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .home-container {
+    background: linear-gradient(180deg, var(--bg-pink) 0%, var(--bg-white) 100%);
+  }
+  
+  .bg-wave {
+    display: none;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+
+  .hero-visuals {
+    height: 300px;
+  }
+
+  .hero-content {
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .nav-right {
+    display: none; /* Simple hide for mobile for now */
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}

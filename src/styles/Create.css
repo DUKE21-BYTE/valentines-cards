@@ -1,0 +1,200 @@
+.create-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Premium subtle floral/noise overlay could go here */
+}
+
+.create-wrapper {
+  width: 100%;
+  max-width: 700px;
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+}
+
+.create-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.create-subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.step-anim-wrapper {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.premium-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 1.5rem;
+  box-shadow: 0 10px 20px -5px rgba(208, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px -5px rgba(208, 0, 0, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: #bbb;
+}
+
+.photo-upload-box {
+  border: 2px dashed #ffb3c1;
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.photo-upload-box:hover {
+  border-color: var(--primary);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.image-preview-wrapper {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.success-card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.success-icon-box {
+  width: 80px;
+  height: 80px;
+  background: #e0fdf4;
+  color: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.link-box {
+  background: white;
+  border: 1px solid #eee;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: inner 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.link-input {
+  border: none;
+  background: transparent;
+  flex: 1;
+  font-family: monospace;
+  font-size: 0.95rem;
+  color: #555;
+  outline: none;
+}
+
+.copy-btn {
+  background: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: #4b5563;
+}
+
+.copy-btn:hover {
+  background: #e5e7eb;
+}
+
+.whatsapp-section {
+  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.wa-input-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.wa-btn {
+  background: #25D366;
+  color: white;
+  padding: 0 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.wa-btn:hover {
+  background: #128C7E;
+}
